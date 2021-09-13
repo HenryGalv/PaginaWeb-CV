@@ -1,0 +1,95 @@
+/*Custom Properties*/
+:root {
+  /*Colors*/
+  --first-color: #5a6e5a;
+  --first-alpha-color: rgba(90, 110, 90, 0.75);
+  --second-color: #f5c265;
+  --second-alpha-color: rgba(245, 194, 101, 0.75);
+  --third-color: #d8d5c4;
+  --third-alpha-color: rgba(216, 213, 196, 0.75);
+  --fourth-color: #6b3e1f;
+  --fourth-alpha-color: rgba(107, 62, 31, 0.75);
+  --link-color: #509ee3;
+  --white-color: #ffffff;
+  --white-alpha-color: rgba(255, 255, 255, 0.5);
+  --gray-one-color: #f3f3f3;
+  --gray-two-color: #cccccc;
+  --black-color: #000000;
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --title-color: #333333;
+  --text-color: #222222;
+  --font: "Montserrat", sans-serif;
+}
+/*Reset*/
+html {
+  box-sizing: borber-box;
+  font-family: var(--font);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+a {
+  color: var(--link-color);
+  transition: all 0.5s ease-out;
+}
+a:hover {
+  opacity: 0.75;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7r em;
+}
+/*Modificar para el movil layout*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/*Components*/
+
+/*Utilities*/
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+/*Site Styles*/
