@@ -1,14 +1,14 @@
 /*Custom Properties*/
 :root {
   /*Colors*/
-  --first-color: #5a6e5a;
-  --first-alpha-color: rgba(90, 110, 90, 0.75);
-  --second-color: #f5c265;
-  --second-alpha-color: rgba(245, 194, 101, 0.75);
-  --third-color: #d8d5c4;
-  --third-alpha-color: rgba(216, 213, 196, 0.75);
-  --fourth-color: #6b3e1f;
-  --fourth-alpha-color: rgba(107, 62, 31, 0.75);
+  --first-color: #761c00;
+
+  --second-color: #1b0000;
+
+  --third-color: #121211;
+
+  --fourth-color: #1b1d18;
+
   --link-color: #509ee3;
   --white-color: #ffffff;
   --white-alpha-color: rgba(255, 255, 255, 0.5);
@@ -20,10 +20,11 @@
   --text-color: #222222;
   --font: "Montserrat", sans-serif;
   --max-width: 1200px;
+  --header-heigh: 4rem;
 }
 /*Reset*/
 html {
-  box-sizing: borber-box;
+  box-sizing: border-box;
   font-family: var(--font);
   font-size: 16px;
   scroll-behavior: smooth;
@@ -77,17 +78,92 @@ h6 {
   margin: 0;
   font-size: 0.7r em;
 }
-/*Modificar para el movil layout*/
+/*?????*/
 img {
   max-width: 100%;
   height: auto;
 }
-
 p {
   line-height: 1.6;
 }
 
 /*Components*/
+/*menu*/
+.btn-menu {
+  background-color: var(--third-color);
+  border: 0.225rem solid var(--first-color);
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-menu::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.225rem;
+  background-color: var(--first-color);
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+.btn-menu::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.225rem;
+  background-color: var(--first-color);
+  transform: translateY(5px);
+  transition: 0.3s;
+}
+.btn-menu.active{
+  border-radius: 50%;
+}
+.btn-menu.active::before {
+  transform: translateY(0px) rotate(45deg);
+}
+.btn-menu.active::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+/*Ocultando los nav*/
+/*Menu*/
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  bottom: var(--header-heigh);
+  width: 100%;
+  background-color: var(--fourth-color);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+.menu.is-active {
+  max-height: 80vh;
+  transition: max-height 0.5s ease-in;
+}
+.menu a {
+  text-decoration: none;
+  padding: 1rem;
+  text-align: center;
+  color: var(--first-color);
+  font-size: 2rem;
+  font-weight: bold;
+}
+.menu a:hover {
+  background-color: var(--white-color);
+  color: var(--second-color);
+}
+.menu > a > img {
+  display: none;
+}
+.menu .homeIcon {
+  display: none;
+}
 
 /*Utilities*/
 .box-shadow-1 {
@@ -98,4 +174,45 @@ p {
   margin-right: auto;
   max-width: var(--max-width);
 }
+.none {
+  display: none;
+}
 /*Site Styles*/
+.logo {
+  width: 80px;
+  position: absolute;
+  top: 3%;
+  right: 4%;
+  z-index: 888;
+}
+/*Hero Image para movil,tablet y desktop*/
+.home {
+  height: 100vh;
+  width: 100vw;
+  background: url(../imgs/HomeImg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  height: var(--header-heigh);
+  padding: 1rem;
+  background-color: var(--third-color);
+}
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 2rem;
+}
+.container > a {
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+}

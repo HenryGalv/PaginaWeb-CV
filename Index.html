@@ -5,54 +5,58 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./imgs/Logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/PaginaWeb-CV/css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <title>HenryGalvez</title>
 </head>
 
 <body>
   <header>
     <section class="container">
-      <div class="logo">
-        <img src="./imgs/Logo.svg" alt="logo">
-        <a href="#inicio">HenryGalvez</a>
+      <a href="#inicio">
+        <h1>HenryGalvez</h1>
+      </a>
+      <div id="btnMenu" class="btn-menu">
+
       </div>
-      <button class="btn-menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path
-            d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z" />
-        </svg>
-      </button>
-      <nav class="menu">
+      <nav id="menu" class="menu">
         <a href="#acerca">
+          Acerca
           <img src="./imgs/PersonIcon.svg" alt="abautIcon">
         </a>
         <a href="#habilidades">
+          Habilidades
           <img src="./imgs/codeIcon.svg" alt="skillsIcon">
         </a>
         <a href="#portafolio">
+          Portafolio
           <img src="./imgs/portafolioIcon.svg" alt="portfolioIcon">
         </a>
         <a href="#contactame">
+          Contactame
           <img src="./imgs/contactIcon.svg" alt="contactIcon">
         </a>
-        <a href="#inicio">
+        <a class="" href="#inicio">
+          Home
           <img src="./imgs/homeIcon.svg" alt="homeIcon">
         </a>
       </nav>
     </section>
   </header>
+
   <section id="inicio" class="home">
-    <img src="./imgs/HomeImg.jpg" alt="Imagen del Home">
+    <div class="logo">
+      <a href="#inicio"><img class="logo" src="./imgs/Logo.svg" alt="logo"></a>
+    </div>
   </section>
+
   <section id="acerca" class="abaoutMe">
     <h2>Acerca</h2>
   </section>
+
   <section id="habilidades" class="skills">
     <h2>Habilidades</h2>
   </section>
