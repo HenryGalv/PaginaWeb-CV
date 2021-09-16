@@ -2,7 +2,8 @@
 ((d) => {
   const $btnMenu = d.getElementById("btnMenu"),
     $menu = d.getElementById("menu");
-    $btnMenu.addEventListener("click", (e) => {
+  $imgPortfolio = d.querySelectorAll(".img-portfolio");
+  $btnMenu.addEventListener("click", (e) => {
     $btnMenu.classList.toggle("active");
     $menu.classList.toggle("is-active");
   });
@@ -12,5 +13,11 @@
       $menu.classList.remove("is-active");
     }
   });
+  $imgPortfolio.forEach(img => {
+    img.addEventListener("click", (e) => {
+      console.log('imagen' + img);
+    });
+  });
+  console.log($imgPortfolio);
 })
   (document);
