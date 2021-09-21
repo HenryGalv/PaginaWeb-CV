@@ -394,7 +394,7 @@ header > .container {
   top: 0;
   right: 0;
   bottom: 0;
-  left:0;
+  left: 0;
   max-width: 0;
   background-color: var(--black-alpha-color);
   display: flex;
@@ -420,8 +420,7 @@ header > .container {
 .modal-close img {
   width: 2.5rem;
 }
-.modal#trabajo-1:target{
-
+.modal#trabajo-1:target {
 }
 /*Contactame*/
 .container-contact {
@@ -452,10 +451,86 @@ header > .container {
 .contact-icon > img {
   width: 100%;
 }
+/*formulario*/
+.contact-form {
+  margin-top: 2rem;
+}
+.contact-form > * {
+  font-family: var(--font);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  width: 100%;
+  border-color: var(--fourth-color);
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+.contact-form .input {
+  border: none;
+  border-bottom: thin solid var(--fourth-color);
+  padding-left: 0;
+  border-radius: 0;
+}
+.btn-submit {
+  background-color: var(--first-color);
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0.1rem 0.18rem 0.125rem rgba(0, 0, 0, 0.25);
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 2rem;
+}
+.container-thanks {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  padding: 2rem;
+  border-radius: 5px;
+  height: 30vh;
+}
+.container-thanks > h3 {
+  text-align: center;
+  color: var(--second-color);
+  margin-bottom: 1.5rem;
+}
+.modal-form {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--black-alpha-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+.modal-form#gracias:target {
+  opacity: 1;
+  pointer-events: auto;
+}
 /*footer*/
 .footer {
   margin-bottom: var(--header-heigh);
   text-align: center;
   color: var(--white-color);
   background-color: var(--first-color);
+}
+/*barra de desplazamiento*/
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--third-color);
+}
+body::-webkit-scrollbar-thumb {
+  width: 0.5rem;
+  background-color: var(--first-color);
+  border-radius: 5px;
 }
