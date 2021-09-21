@@ -1,8 +1,9 @@
 /*Menu*/
 ((d) => {
   const $btnMenu = d.getElementById("btnMenu"),
-    $menu = d.getElementById("menu");
-  $imgPortfolio = d.querySelectorAll(".img-portfolio");
+    $menu = d.getElementById("menu"),
+  $imgPortfolio = d.querySelectorAll(".img-portfolio"),
+  $modal = d.querySelectorAll(".modal");
   $btnMenu.addEventListener("click", (e) => {
     $btnMenu.classList.toggle("active");
     $menu.classList.toggle("is-active");
@@ -13,11 +14,13 @@
       $menu.classList.remove("is-active");
     }
   });
-  $imgPortfolio.forEach(img => {
-    img.addEventListener("click", (e) => {
-      console.log('imagen' + img);
-    });
-  });
+  for (let i = 0; i < $imgPortfolio.length; i++) {
+    $imgPortfolio[i].addEventListener("click", (e) => {
+      $modal[i].classList.toggle
+      ('modal-active');
+      console.log('imagen' + i);
+    });    
+  }
   console.log($imgPortfolio);
 })
   (document);

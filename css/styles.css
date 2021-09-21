@@ -141,12 +141,12 @@ p {
   background-color: var(--fourth-color);
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.5s ease-out;
+  transition: max-height 0.3s ease-out;
 }
 
 .menu.is-active {
   max-height: 80vh;
-  transition: max-height 0.5s ease-in;
+  transition: max-height 0.3s ease-in;
 }
 .menu a {
   text-decoration: none;
@@ -285,6 +285,7 @@ header > .container {
   width: 40%;
   border-radius: 50%;
   box-shadow: 0.18rem 0.18rem 0.125rem rgba(0, 0, 0, 0.25);
+  filter: contrast(140%);
 }
 .btn-downloadCV {
   background-color: var(--first-color);
@@ -385,6 +386,71 @@ header > .container {
 }
 .img6-portfolio {
   background-image: url(../imgs/portfolio-6.jpg);
+}
+/*Modal*/
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  max-width: 0;
+  background-color: var(--black-alpha-color);
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.modal-active {
+  opacity: 1;
+  max-width: 100%;
+  transition: all 0.3s ease;
+}
+.modal-content {
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.modal-close img {
+  width: 2.5rem;
+}
+.modal#trabajo-1:target{
+
+}
+/*Contactame*/
+.container-contact {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-contact > img {
+  width: 40%;
+  border-radius: 50%;
+  box-shadow: 0.18rem 0.18rem 0.125rem rgba(0, 0, 0, 0.25);
+  filter: contrast(140%) grayscale(100%);
+}
+.container-contact-icon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+.contact-icon {
+  text-decoration: none;
+  margin: 0.5rem;
+  height: 4rem;
+  width: 10%;
+}
+.contact-icon > img {
+  width: 100%;
 }
 /*footer*/
 .footer {
