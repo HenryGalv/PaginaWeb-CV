@@ -608,7 +608,7 @@ body::-webkit-scrollbar-thumb {
     padding: 14px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    transition: all 0.3s ease-out;
+    transition: all 0.2s ease;
     z-index: 666;
   }
 
