@@ -18,10 +18,8 @@
     $imgPortfolio[i].addEventListener("click", (e) => {
       $modal[i].classList.toggle
         ('modal-active');
-      console.log('imagen' + i);
     });
   }
-  console.log($imgPortfolio);
 })
   (document);
 ((d) => {
